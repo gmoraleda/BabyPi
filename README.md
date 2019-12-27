@@ -6,7 +6,7 @@
 Baby monitor using a Raspberry Pi and the NoIR camera module.
 This is inteded as a summary of the steps that I followed to get a Raspberry Pi 3 working as a baby monitor. There are many guides out there, but for some reason or another, none of them was up to date and I could not get them working.
 
-## Hardware
+## Shopping List
 - Raspberry Pi 3 (any model would do, but having wifi is really convinient for this project)
 - Power supply
 - [NoIR camera module](https://shop.pimoroni.com/products/raspberry-pi-camera-module-v2-1-with-mount?variant=19833929799) (this opens the possibility of installing IR leds/illuminator and be able to see at night)
