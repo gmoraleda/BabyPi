@@ -4,28 +4,28 @@
 
 ## About
 Baby monitor using a Raspberry Pi and the NoIR camera module.
-This is inteded as a summary of the steps that I followed to get a Raspberry Pi 3 working as a baby monitor. There are many guides out there, but for some reason or another, none of them was up to date and I could not get them working.
+This is intended as a summary of the steps that I followed to get a Raspberry Pi 3 working as a baby monitor. There are many guides out there, but for some reason or another, none of them was up to date and I could not get them working.
 
 ## Shopping List
-- Raspberry Pi 3 (any model would do, but having wifi is really convinient for this project)
+- Raspberry Pi 3 (any model would do, but having WiFi is really convenient for this project)
 - Power supply
-- [NoIR camera module](https://shop.pimoroni.com/products/raspberry-pi-camera-module-v2-1-with-mount?variant=19833929799) (this opens the possibility of installing IR leds/illuminator and be able to see at night)
+- [NoIR camera module](https://shop.pimoroni.com/products/raspberry-pi-camera-module-v2-1-with-mount?variant=19833929799) (this opens the possibility of installing IR led/illuminator and be able to see at night)
 - [DHT22 temperature and humidity sensor](https://www.ebay.de/itm/AM2302-DHT22-Digital-Temperatur-und-Feuchtigkeits-Sensor-Modul-SE08004/271574585686)
 - [SmartiPi case](https://shop.pimoroni.com/products/smartipi-case-for-raspberry-pi)
 - [Floating handle for action camera](https://www.ebay.de/itm/Water-Floating-Diving-Buoyancy-Selfie-Stick-Handle-Accessories-For-Gopro-gib/184044745464)
 
 ## Installation
 ### Ground installation
-This whole project has been done with the Pi being managed via SSH. It is really convenient. There are four main steps to get the Pi alive from stratch:
+This whole project has been done with the Pi being managed via SSH. It is really convenient. There are four main steps to get the Pi alive from scratch:
 
  1. [Install](https://www.raspberrypi.org/documentation/installation/installing-images/) Raspbian in the micro SD card.
- 2. [Create a wpa_supplicant.conf file](https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/) to connect the Pi to our wifi network.
+ 2. [Create a wpa_supplicant.conf file](https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/) to connect the Pi to our WiFi network.
  3. [Enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) to access the Pi remotely via terminal or with an SFTP client. On macOS I'm using [Cyberduck](https://cyberduck.io).
 
 ### Camera and DHT22
 With the basic installation up and running we can shut down the Pi and start connecting the camera module. Once the camera module is [installed and tested](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera) (this is pretty straightforward), the next step is to connect the temperature sensor to the GPIO board. 
 
-The version I bought is already prepared to be conneected to the GPIO directly, but in case you have the version with 4 pins you need to install a resistor. For the 3-pin version, the wiring is done as follow:
+The version I bought is already prepared to be connected to the GPIO directly, but in case you have the version with 4 pins you need to install a resistor. For the 3-pin version, the wiring is done as follow:
 
     (+)   -> Pin 1
     (out) -> Pin 7
@@ -81,13 +81,13 @@ We need to open the cron table (`sudo crontab -e`), and add the following line a
 
 
 ## RPi Cam Web Interface
-This piece of software allows us to connect to the camera using a browser. After following the installations instrutions, we can access our camera typing the IP of our Raspberry Pi on any device connected to the same network. I'm using the standard configuration, using an Apache server.
+This piece of software allows us to connect to the camera using a browser. After following the installations instructions, we can access our camera typing the IP of our Raspberry Pi on any device connected to the same network. I'm using the standard configuration, using an Apache server.
 
-One the camera is running and visible there is only one mising step: adding the sensor information to the camera. There is an annotation prepared to display the content of `/dev/shm/mjpeg/user_annotate.txt` (therefore we copy it as part of the Cron script).
+One the camera is running and visible there is only one missing step: adding the sensor information to the camera. There is an annotation prepared to display the content of `/dev/shm/mjpeg/user_annotate.txt` (therefore we copy it as part of the Cron script).
 
 Under *Camera Settings -> Annotation* add `%a` to show the user annotation.
 
-It is also combinient to start RPi Cam on every boot of the Raspberry Pi.
+It is also convenient to start RPi Cam on every boot of the Raspberry Pi.
 
 ## Final Thoughts
 With everything connected and working this is how it looks like:
@@ -97,6 +97,6 @@ With everything connected and working this is how it looks like:
 
 The sensor needs to stay away from the Raspberry Pi case in order to provide accurate readings. The Raspberry Pi produces heat. Right now is hanging on the side. The Lego case opens many possibilities, so I could build a side box to hold the sensor.
 
-The NoIR camera is able to record at night using IR lamps. The next setp of this project could be installing a couple of IR leds that automatically turn on at night using a light sensor or scheduling it after sunset (using some weather API).
+The NoIR camera is able to record at night using IR lamps. The next step of this project could be installing a couple of IR led that automatically turn on at night using a light sensor or scheduling it after sunset (using some weather API).
 
 There is no audio streaming. Although I bought a USB microphone, I haven't decided yet on how to attach the audio streaming to the camera feed. 
