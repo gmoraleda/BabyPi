@@ -7,7 +7,7 @@ Baby monitor using a Raspberry Pi and the NoIR camera module.
 This is inteded as a summary of the steps that I followed to get a Raspberry Pi 3 working as a baby monitor. There are many guides out there, but for some reason or another, none of them was up to date and I could not get them working.
 
 ## Hardware
-- Raspberry Pi 3 (any model would do, but having wifi is really convinient for this project).
+- Raspberry Pi 3 (any model would do, but having wifi is really convinient for this project)
 - Power supply
 - [NoIR camera module](https://shop.pimoroni.com/products/raspberry-pi-camera-module-v2-1-with-mount?variant=19833929799) (this opens the possibility of installing IR leds/illuminator and be able to see at night)
 - [DHT22 temperature and humidity sensor](https://www.ebay.de/itm/AM2302-DHT22-Digital-Temperatur-und-Feuchtigkeits-Sensor-Modul-SE08004/271574585686)
