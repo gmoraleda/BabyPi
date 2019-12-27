@@ -51,7 +51,7 @@ Store this in a file called `humidity.py` and, if everything went as supposed, w
     python3 ~/humidity.py
 
 #### Schedule the reading 
-With that in place we want to schedule a job using [cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md) to read the temperature every 5 minutes and store it in a log file. I created a second shell script to perform the readings and copy them to a log file and also to a text file (*user_annotate.txt*) that will be shown in the livestream of the cam:
+With that in place we want to schedule a job using [cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md) to read the temperature every 5 minutes and store it in a log file. I created a second shell script to perform the readings and copy them to a log file and to a text file (*user_annotate.txt*) that will be shown in the camera live stream:
 
 
 ----------
