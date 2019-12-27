@@ -25,7 +25,7 @@ This whole project has been done with the Pi being managed via SSH. It is really
 ### Camera and DHT22
 With the basic installation up and running we can shut down the Pi and start connecting the camera module. Once the camera module is [installed and tested](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera) (this is pretty straightforward), the next step is to connect the temperature sensor to the GPIO board. 
 
-The version I bought is already prepared to be conneected to the GPIO direcly, but in case you have the version with 4 pins you need to install a resistor. For the 3-pin version, the wiring is done as follow:
+The version I bought is already prepared to be conneected to the GPIO directly, but in case you have the version with 4 pins you need to install a resistor. For the 3-pin version, the wiring is done as follow:
 
     (+)   -> Pin 1
     (out) -> Pin 7
