@@ -79,6 +79,7 @@ We need to open the cron table (`sudo crontab -e`), and add the following line a
 
     */5 * * * * /home/pi/monitor/temperature_script.sh
 
+Make sure you write the right path there.
 
 ## RPi Cam Web Interface
 This piece of software allows us to connect to the camera using a browser. After following the installations instructions, we can access our camera typing the IP of our Raspberry Pi on any device connected to the same network. I'm using the standard configuration, using an Apache server.
