@@ -97,6 +97,6 @@ With everything connected and working this is how it looks like:
 
 The sensor needs to stay away from the Raspberry Pi case in order to provide accurate readings. The Raspberry Pi produces heat. Right now is hanging on the side. The Lego case opens many possibilities, so I could build a side box to hold the sensor.
 
-The NoIR camera is able to record at night using IR lamps. The next setp of this project could be installing a couple of IR leds that automatically turn on at night using a light sensor or scheduling if after sunset (using some weather API).
+The NoIR camera is able to record at night using IR lamps. The next setp of this project could be installing a couple of IR leds that automatically turn on at night using a light sensor or scheduling it after sunset (using some weather API).
 
-There is no audio streaming. Altough I bough a USB microphone, I haven't decided yet on how to attach the audio streaming to the camera feed. 
+There is no audio streaming. Although I bought a USB microphone, I haven't decided yet on how to attach the audio streaming to the camera feed. 
