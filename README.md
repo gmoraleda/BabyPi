@@ -6,7 +6,7 @@
 Baby monitor using a Raspberry Pi and the NoIR camera module.
 This is intended as a summary of the steps that I followed to get a Raspberry Pi 3 working as a baby monitor. There are many guides out there, but for some reason or another, none of them was up to date and I could not get them working.
 
-## Shopping List
+## Shopping list
 - Raspberry Pi 3 (any model would do, but having WiFi is really convenient for this project)
 - Power supply
 - [NoIR camera module](https://shop.pimoroni.com/products/raspberry-pi-camera-module-v2-1-with-mount?variant=19833929799) (this opens the possibility of installing IR led/illuminator and be able to see at night)
@@ -15,7 +15,7 @@ This is intended as a summary of the steps that I followed to get a Raspberry Pi
 - [Floating handle for action camera](https://www.ebay.de/itm/Water-Floating-Diving-Buoyancy-Selfie-Stick-Handle-Accessories-For-Gopro-gib/184044745464)
 
 ## Installation
-### Ground installation
+### Basic setup
 This whole project has been done with the Pi being managed via SSH. It is really convenient. There are four main steps to get the Pi alive from scratch:
 
  1. [Install](https://www.raspberrypi.org/documentation/installation/installing-images/) Raspbian in the micro SD card.
@@ -89,7 +89,7 @@ Under *Camera Settings -> Annotation* add `%a` to show the user annotation.
 
 It is also convenient to start RPi Cam on every boot of the Raspberry Pi.
 
-## Final Thoughts
+## Final thoughts
 With everything connected and working this is how it looks like:
 ![Browser Interface](https://imgur.com/ppIBUK5.jpg)
 
