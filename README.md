@@ -46,6 +46,8 @@ The python script (we need to install python and the Adafruit_DHT library) used 
     else:
         print("Failed to retrieve data from humidity sensor")
 
+_*Notice that even the sensor is connected to the physical PIN 7, that PIN corresponds to GPIO4, therefore DHT_PIN = 4_
+
 Store this in a file called `humidity.py` and, if everything went as supposed, we should be able to query the sensor running the following command:
 
     python3 ~/humidity.py
